@@ -184,8 +184,8 @@ if __name__ == "__main__":
     X = []
     y = []
     
-    healthy_dir = "data/healthy/*.jpg"
-    glaucoma_dir = "data/glaucoma/*.jpg"
+    healthy_dir = "C:/Glauacoma/healthy.jpg"  #Please add your images
+    glaucoma_dir = "C:/Glaucoma/glaucoma.jpg"
     
 
     
