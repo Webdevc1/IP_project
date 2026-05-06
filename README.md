@@ -29,4 +29,39 @@ The pipeline builds upon traditional methodologies by combining **Bit-Plane Slic
 Ensure you have Python 3.8+ installed. You will need the following libraries to run the pipeline:
 
 ```bash
-pip install opencv-python numpy scikit-image scikit-learn****
+pip install opencv-python numpy scikit-image scikit-learn
+```
+  ## 📥 Dataset Acquisition
+ The easiest way to acquire standardized datasets is through Kaggle. First, ensure you have the Kaggle CLI installed:
+
+  ```bash
+  pip install kaggle
+  (Make sure your kaggle.json API token is placed in ~/.kaggle/)
+  ```
+  You can then download popular public glaucoma datasets directly to your project folder:
+  
+  ```bash
+  # Example 1: Download the SMDG (Standardized Multi-Channel Dataset for Glaucoma)
+  kaggle datasets download -d crarojas/smdg-19
+  
+  # Example 2: Download a compiled Glaucoma classification dataset
+  kaggle datasets download -d rnstch/glaucoma
+  ```
+  After downloading, unzip the files into your project directory.
+
+
+Once you have acquired a dataset, extract the images into a data/ directory in the root of your project. Organize the .jpg, .png,       or .tif images into healthy and glaucoma subfolders as shown below:
+
+    project_root/
+    │
+    ├── glaucoma_detection.py    # Main pipeline script
+    ├── README.md                # Project documentation
+    │
+    └── data/
+        ├── healthy/             # Normal/Healthy fundus images
+        │   ├── image_001.jpg
+        │   └── ...
+        │
+        └── glaucoma/            # Positive glaucoma fundus images
+            ├── image_050.jpg
+            └── ...
